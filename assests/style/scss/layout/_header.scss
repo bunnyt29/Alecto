@@ -1,12 +1,20 @@
+@import '../abstracts/typography';
 header{
     background-image: url(/assests/images/photo.png);
+    padding: 57px 266px 0 265px;
 
     nav{
         display: flex;
         justify-content: space-between;
-    }
 
-    ul{
-        display: flex;
+        ul{
+            display: flex;
+            gap: 60px;
+
+            li a{
+                text-transform: uppercase;
+                font-weight: $fw-bold;
+            }
+        }
     }
 }

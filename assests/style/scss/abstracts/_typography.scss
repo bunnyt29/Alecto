@@ -1,3 +1,4 @@
+@use 'colors';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap');
 @font-face {
     font-family: ProximaNova;
@@ -20,5 +21,23 @@ $line-height-sm: 1.25;
 $line-height-md: 1.5;
 
 /* Letter spacings. */
-$letter-spacing-sm: 0.05em;
+$letter-spacing-sm: 0.02em;
 $letter-spacing-md: 0.1em;
+
+/*font weight */
+$fw-thin: 100;
+$fw-extraLight: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+a, h1, h2, h3, h4, h5, h6{
+    font-family: $font-family-primary;
+}
+a{
+    font-size: $font-size-sm;
+    color: colors.$white;
+    text-decoration: none;
+    letter-spacing: $letter-spacing-sm;
+}

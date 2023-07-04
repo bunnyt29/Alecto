@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap"); /* http://meyerweb.com/eric/tools/css/reset/ 
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -60,13 +62,51 @@ table {
 /* Font sizes. */
 /* Line heights. */
 /* Letter spacings. */
+/*font weight */
+a, h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  font-size: 0.875rem;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url("/assests/style/fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf") format("truetype");
+}
+/* Font families. */
+/* Font sizes. */
+/* Line heights. */
+/* Letter spacings. */
+/*font weight */
+a, h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  font-size: 0.875rem;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
 header {
   background-image: url(/assests/images/photo.png);
+  padding: 57px 266px 0 265px;
 }
 header nav {
   display: flex;
   justify-content: space-between;
 }
-header ul {
+header nav ul {
   display: flex;
+  gap: 60px;
+}
+header nav ul li a {
+  text-transform: uppercase;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
