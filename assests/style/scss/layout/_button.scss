@@ -1,0 +1,14 @@
+@use '../abstracts/colors';
+@use '../abstracts/typography';
+
+@mixin buttonTheme($theme: transperent) {
+  background-color: $theme;
+  width: 183px;
+  height: 47px;
+  border-radius: 23.5px;
+  color: white;
+  text-align: center;
+  letter-spacing: typography.$letter-spacing-sm;
+  display: grid;
+  place-items: center;
+}

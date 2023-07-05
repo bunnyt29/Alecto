@@ -1,0 +1,7 @@
+@use '../abstracts/variables';
+
+.work-element{
+    padding: variables.$wrapper;
+    display: grid;
+    grid-template-columns: 33% 67%;
+}

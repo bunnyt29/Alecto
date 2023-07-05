@@ -1,0 +1,53 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+@use '../abstracts/typography';
+@use 'button';
+
+.about-content{
+    padding: variables.$wrapper;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+
+    &-element{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 156px;
+
+        .image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 86px;
+            width: 182px;
+            height: 182px;
+            border-radius: 50%;
+            background-color: colors.$light-grey-background;
+
+            &:hover{
+                background-color: colors.$green;
+                transition: 0.2ms;
+            }
+
+            img{
+                width: 53px;
+                height: 53px;
+                z-index: 2;
+            }
+        }
+
+        p{
+            margin-top: 48px;
+            text-align: center;
+            line-height: typography.$line-height-sm;
+        }
+    }
+}
+
+.button-learn-more-green{
+    @include button.buttonTheme(colors.$green);
+    margin: auto;
+    margin-top: 107px;
+}

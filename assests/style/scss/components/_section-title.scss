@@ -1,0 +1,15 @@
+@import '../abstracts/colors';
+
+.section-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 110px;
+
+    span{
+        width: 30px;
+        height: 1px;
+        margin-block: 27px 38px;
+        background-color: $green;
+    }
+}

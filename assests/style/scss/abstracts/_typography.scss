@@ -12,17 +12,19 @@ $font-family-secondary: ProximaNova;
 /* Font sizes. */
 $font-size-sm: 0.875rem;
 $font-size-md: 1.125rem;
-$font-size-lg: 1.875rem;
-$font-size-xl: 2.25rem;
-$font-size-2xl: 3.75rem;
+$font-size-lg: 1.5rem;
+$font-size-xl: 1.875rem;
+$font-size-2xl: 2.25rem;
+$font-size-3xl: 3.75rem;
 
 /* Line heights. */
-$line-height-sm: 1.25;
+$line-height-sm: 30px;
 $line-height-md: 1.5;
 
 /* Letter spacings. */
-$letter-spacing-sm: 0.02em;
-$letter-spacing-md: 0.1em;
+$letter-spacing-sm: 0.45px;
+$letter-spacing-md: 0.75px;
+$letter-spacing-lg: 1.5px;
 
 /*font weight */
 $fw-thin: 100;
@@ -35,8 +37,40 @@ $fw-bold: 700;
 a, h1, h2, h3, h4, h5, h6{
     font-family: $font-family-primary;
 }
+
+p{
+    font-family: $font-family-secondary;
+    font-size: $font-size-md;
+    color: colors.$light-grey;
+    letter-spacing: $letter-spacing-sm;
+    
+}
+
+h1{ 
+    font-size: $font-size-3xl;
+    font-weight: $fw-thin;
+    color: white;
+    letter-spacing: $letter-spacing-lg;
+}
+
+h2{
+    font-size: $font-size-3xl;
+    font-weight: $fw-extraLight;
+    color: colors.$dark-grey;
+    letter-spacing: $letter-spacing-lg;
+}
+
+h3{
+    font-size: $font-size-xl;
+    font-weight: $fw-regular;
+    letter-spacing: $letter-spacing-md;
+    color: black;
+
+}
+
 a{
     font-size: $font-size-sm;
+    font-weight: $fw-bold;
     color: colors.$white;
     text-decoration: none;
     letter-spacing: $letter-spacing-sm;

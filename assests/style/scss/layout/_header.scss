@@ -1,11 +1,28 @@
+@use 'button';
+@use '../abstracts/colors';
 @import '../abstracts/typography';
+@import '../abstracts/variables';
+
 header{
+    position: relative;
+    height: 100vh;
     background-image: url(/assests/images/photo.png);
-    padding: 57px 266px 0 265px;
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('/assests/images/photo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: $wrapper;
+    display: flex;
+    flex-direction: column;
 
     nav{
         display: flex;
         justify-content: space-between;
+        margin-top: 57px;
+
+        img{
+            height: 27px;
+            width: 108px;
+        }
 
         ul{
             display: flex;
@@ -13,8 +30,70 @@ header{
 
             li a{
                 text-transform: uppercase;
-                font-weight: $fw-bold;
             }
         }
     }
+
+    .hero{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        width: 65%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        gap: 63px;
+
+        .slider-wrapper{
+            button svg{
+                margin: auto;
+            }
+
+            ul li{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                h1{
+                    margin-bottom: 30px;
+                    span{
+                        font-weight: $fw-bold;
+                    }
+                }
+    
+                p{
+                    font-size: $font-size-lg;
+                    color: white;
+                }
+            }
+        }
+
+        .button{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 72px;
+
+            .button-learn-more{
+                @include button.buttonTheme();
+                border:2px solid white;
+            }
+
+            .slider-buttons{
+                display: flex;
+                .slider-icon{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    border: 2px solid white;
+
+                    &:not(:first-child){
+                        margin-left: 13px;
+                    }
+                }
+            }
+        }
+    }
+
 }
