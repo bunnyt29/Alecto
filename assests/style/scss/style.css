@@ -376,18 +376,43 @@ q span {
 }
 
 #services {
-  padding: 0px 266px 0 265px;
+  background-color: rgba(237, 239, 241, 0.35);
 }
 #services .services {
+  padding: 0px 266px 0 265px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 80px;
+  margin-top: 166px;
+}
+#services .services .service {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: 50px;
+}
+#services .services .service-image {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 94px;
+  height: 94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#services .services .service-image img {
+  width: 32px;
+  height: 32px;
 }
 #services .services .service-description h3 {
+  margin-bottom: 55px;
   font-size: 3.75rem;
   font-weight: 200;
   color: #576671;
   letter-spacing: 1.5px;
+}
+#services .services .service-description p {
+  line-height: 48px;
+  letter-spacing: 0.45px;
 }
 
 .section-title {

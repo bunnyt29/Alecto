@@ -3,22 +3,47 @@
 @use '../abstracts/colors';
 
 #services{
-    padding: variables.$wrapper;
+    background-color: colors.$very-light-grey-background;
 
     .services{
-
+        padding: variables.$wrapper;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 80px;
+        margin-top: 166px;
 
         .service{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            gap: 50px;
+
+            &-image{
+                background-color: #fff;
+                border-radius: 50%;
+                width: 94px;
+                height: 94px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                img{
+                    width: 32px;
+                    height: 32px;
+                }
+            }
 
             &-description{
                 h3{
+                    margin-bottom: 55px;
                     font-size: typography.$font-size-3xl;
                     font-weight: typography.$fw-extraLight;
                     color: colors.$dark-grey;
                     letter-spacing: typography.$letter-spacing-lg;
+                }
+
+                p{
+                    line-height: typography.$line-height-lg;
+                    letter-spacing: typography.$letter-spacing-sm;
                 }
             }
         }
