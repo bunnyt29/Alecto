@@ -19,7 +19,7 @@ $font-size-3xl: 3.75rem;
 
 /* Line heights. */
 $line-height-sm: 30px;
-$line-height-md: 1.5;
+$line-height-md: 36px;
 
 /* Letter spacings. */
 $letter-spacing-sm: 0.45px;
@@ -34,7 +34,7 @@ $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
-a, h1, h2, h3, h4, h5, h6{
+q, a, h1, h2, h3, h4, h5, h6{
     font-family: $font-family-primary;
 }
 
@@ -74,4 +74,11 @@ a{
     color: colors.$white;
     text-decoration: none;
     letter-spacing: $letter-spacing-sm;
+}
+
+q{
+    font-size: $font-size-xl;
+    font-weight: $fw-light;
+    color: colors.$white;
+    letter-spacing: $letter-spacing-md;
 }

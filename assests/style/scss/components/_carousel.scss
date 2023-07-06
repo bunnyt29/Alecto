@@ -1,6 +1,18 @@
+@use '../abstracts/typography';
+
 .slider-wrapper {
     position: relative;
     overflow: hidden;
+
+    button svg{
+        margin: auto;
+    }
+
+    ul li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .slides-container {
@@ -11,17 +23,14 @@
     padding: 0;
     overflow: scroll;
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  
 }
 
 .slide {
     width: 100%;
     height: 100%;
     flex: 1 0 100%;
-}
-
-.slides-container {
-    scrollbar-width: none;
-    -ms-overflow-style: none;  
 }
 
 .slides-container::-webkit-scrollbar { 
@@ -32,7 +41,6 @@
 .slide-arrow {
     background-color: transparent;
     border: none;
-    position: absolute;
     display: flex;
     top: 0;
     bottom: 0;
@@ -40,11 +48,31 @@
     padding: 0;
     cursor: pointer;
   }
+
+.first{
+    position: absolute;
+}
   
   #slide-arrow-prev {
     left: 0;
   }
 
+
   #slide-arrow-next {
     right: 0;
   }
+
+  .slider-buttons{
+    display: flex;
+    justify-content: center;
+    .slider-icon{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid white;
+
+        &:not(:first-child){
+            margin-left: 13px;
+        }
+    }
+}

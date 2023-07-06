@@ -1,7 +1,50 @@
 @use '../abstracts/variables';
+@use '../abstracts/colors';
+@use '../abstracts/typography';
+
+#work-element-1{
+    background-color: colors.$very-light-grey-background;
+    margin-top: 108px;
+}
 
 .work-element{
     padding: variables.$wrapper;
+    padding-block: 144px 103px;
     display: grid;
     grid-template-columns: 33% 67%;
+    gap: 247px;
+    
+    &-description{
+        width: 80%;
+        padding-block: 20px 62px;
+
+        h2{
+            margin-bottom: 72px;
+        }
+
+        p{
+            line-height: typography.$line-height-md;
+            letter-spacing: typography.$letter-spacing-sm;   
+        }
+
+        .button-learn-more-green{
+            place-items: left;
+            margin: 74px 0 0 0;
+        }
+    }
+}
+
+#work-element-2{
+    gap: 0;
+    grid-template-columns: 60% 40%;
+    .work-element-image-2{
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    .work-element-description-2{
+        grid-row: 1;
+        grid-column: 1;
+        width: 90%;
+    }
 }

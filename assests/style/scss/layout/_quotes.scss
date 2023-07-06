@@ -1,0 +1,47 @@
+@use '../components/carousel';
+@use '../abstracts/variables';
+@use '../abstracts/typography';
+@use '../abstracts/colors';
+
+#quotes{
+    
+    position: relative;
+    padding: variables.$wrapper;
+    padding-block: 188px 147px;
+    background-image: url(/assests/images/photo_2.png);
+    background-repeat: no-repeat;
+
+    .quotes-carousel{
+        display: flex;
+        justify-content: space-between;
+
+        .slider-wrapper .slides-container .slide {
+
+            img{
+                margin-bottom: 45px;
+            }
+    
+            p{
+                color: colors.$transperent-name;
+                font-weight: typography.$fw-light;
+        
+                span{
+                    font-weight: typography.$fw-medium;
+                }
+            }
+    
+        }
+    }
+
+    .slider-buttons{
+        margin-top: 123px;
+    }
+}
+
+q{
+    margin-bottom: 38px;
+
+    span{
+        color: colors.$green;
+    }
+}
