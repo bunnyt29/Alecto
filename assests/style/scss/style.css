@@ -431,6 +431,14 @@ q span {
 .team-members .member img {
   width: 100%;
 }
+.team-members .member .name-on-hover {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(23, 218, 163, 0.9);
+}
+.team-members .member:hover {
+  z-index: 1000;
+}
 .team-members .dark-grey-background {
   background-color: #e4e4e5;
 }
@@ -452,6 +460,7 @@ q span {
 }
 .items .item {
   background-color: #ffffff;
+  box-shadow: 0 0 35px 0 rgba(227, 227, 227, 0.65);
 }
 .items .item hr {
   color: rgba(0, 0, 0, 0.1);
@@ -489,6 +498,9 @@ q span {
   font-weight: bold;
   letter-spacing: 5px;
 }
+.items .item-button:hover {
+  cursor: pointer;
+}
 
 #locations {
   padding: 126px 0 111px 265px;
@@ -513,6 +525,55 @@ q span {
 }
 #locations img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 282px 0 250px 0;
+  background-image: url(/assests/images/try-our-template.png);
+  background-repeat: no-repeat;
+}
+#banner h2 {
+  color: #ffffff;
+  font-weight: 200;
+}
+#banner h2 span {
+  font-weight: 700;
+}
+
+footer {
+  position: relative;
+  background-image: url(/assests/images/footer-background.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 700px;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 72px 266px 0 266px;
+}
+footer .footer .copyright {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+footer .footer-navbar ul {
+  display: flex;
+  gap: 40px;
+}
+footer .footer-navbar ul li p {
+  opacity: 0.45;
+}
+footer .footer-navbar ul li p:hover {
+  opacity: 1;
+  cursor: pointer;
+  transition: 0.5ms;
 }
 
 .section-title {

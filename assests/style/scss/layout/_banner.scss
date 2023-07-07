@@ -1,0 +1,20 @@
+@use '../abstracts/colors';
+@use '../abstracts/typography';
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 282px 0 250px 0;
+    background-image: url(/assests/images/try-our-template.png);
+    background-repeat: no-repeat;
+
+    h2{
+        color: colors.$white;
+        font-weight: typography.$fw-extraLight;
+
+        span{
+            font-weight: typography.$fw-bold;
+        }
+    }
+}

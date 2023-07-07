@@ -1,0 +1,34 @@
+footer{
+    position: relative;
+    background-image: url(/assests/images/footer-background.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 700px;
+
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 72px 266px 0 266px;
+
+        .copyright{
+            display: flex;
+            align-items: center;
+            gap: 21px;
+        }
+
+        &-navbar ul{
+            display: flex;
+            gap: 40px;
+
+            li p{
+                opacity: 0.45;
+            }
+
+            li p:hover{
+                opacity: 1;
+                cursor: pointer;
+                transition: 0.5ms;
+            }
+        }
+    }
+}
