@@ -1,0 +1,33 @@
+@use '../abstracts/typography';
+
+#locations{
+
+    padding:126px 0 111px 265px;
+
+    .locations{
+        display: flex;
+        gap: 56px;
+
+        &-description{
+            padding-block: 65px 80px;
+
+            h2{
+                margin-bottom: 72px;
+            }
+
+            p{
+                line-height: typography.$line-height-md;
+                letter-spacing: typography.$letter-spacing-sm;   
+            }
+
+            .button-learn-more-green{
+                place-items: left;
+                margin: 74px 0 0 0;
+            }
+        }
+    }
+
+    img{
+        width: 100%;
+    }
+}

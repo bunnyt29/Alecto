@@ -448,9 +448,13 @@ q span {
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-top: 107px;
+  padding-bottom: 111px;
 }
 .items .item {
   background-color: #ffffff;
+}
+.items .item hr {
+  color: rgba(0, 0, 0, 0.1);
 }
 .items .item-price {
   padding: 54px 34px 57px 34px;
@@ -484,6 +488,31 @@ q span {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 5px;
+}
+
+#locations {
+  padding: 126px 0 111px 265px;
+}
+#locations .locations {
+  display: flex;
+  gap: 56px;
+}
+#locations .locations-description {
+  padding-block: 65px 80px;
+}
+#locations .locations-description h2 {
+  margin-bottom: 72px;
+}
+#locations .locations-description p {
+  line-height: 36px;
+  letter-spacing: 0.45px;
+}
+#locations .locations-description .button-learn-more-green {
+  place-items: left;
+  margin: 74px 0 0 0;
+}
+#locations img {
+  width: 100%;
 }
 
 .section-title {

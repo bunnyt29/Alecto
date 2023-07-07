@@ -12,9 +12,13 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 107px;
-
+    padding-bottom: 111px;
     .item{
         background-color: colors.$white;
+
+        hr{
+            color: rgba($color: #000000, $alpha: 0.1);
+        }
 
         &-price{
             padding: 54px 34px 57px 34px;
