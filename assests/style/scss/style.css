@@ -424,20 +424,40 @@ q span {
   margin-top: 111px;
 }
 .team-members .member {
+  position: relative;
   display: flex;
   align-items: end;
-  padding: 50px 55px 0 55px;
+  padding: 50px 55px 0 0;
+  text-align: center;
 }
 .team-members .member img {
   width: 100%;
+  padding-left: 55px;
 }
-.team-members .member .name-on-hover {
+.team-members .member q {
+  display: none;
+  padding: 186px 119px;
+}
+.team-members .member .member-name {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 380px;
+  height: 398px;
+  position: absolute;
   background-color: rgba(23, 218, 163, 0.9);
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.25rem;
+  color: #ffffff;
+  font-weight: 200;
+  opacity: 0;
 }
-.team-members .member:hover {
-  z-index: 1000;
+.team-members .member .member-name:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.5ms;
 }
 .team-members .dark-grey-background {
   background-color: #e4e4e5;
