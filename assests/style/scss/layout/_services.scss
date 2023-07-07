@@ -11,6 +11,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 80px;
         margin-top: 166px;
+        padding-bottom: 156px;
 
         .service{
             display: grid;
@@ -42,6 +43,7 @@
                 }
 
                 p{
+                    font-size: typography.$font-size-sm;
                     line-height: typography.$line-height-lg;
                     letter-spacing: typography.$letter-spacing-sm;
                 }

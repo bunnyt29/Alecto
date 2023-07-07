@@ -1,0 +1,23 @@
+.team-members{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 111px;
+
+    .member{
+        display: flex;
+        align-items: end;
+        padding: 50px 55px 0 55px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .dark-grey-background{
+        background-color: #e4e4e5;
+    }
+
+    .light-grey-background{
+        background-color: #eff0f0;
+    }
+}

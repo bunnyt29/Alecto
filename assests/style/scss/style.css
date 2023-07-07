@@ -188,6 +188,7 @@ header .hero .button .button-learn-more {
   align-items: center;
   justify-content: center;
   margin-top: 156px;
+  text-align: center;
 }
 .about-content-element .image-container {
   display: flex;
@@ -384,6 +385,7 @@ q span {
   grid-template-columns: repeat(2, 1fr);
   gap: 80px;
   margin-top: 166px;
+  padding-bottom: 156px;
 }
 #services .services .service {
   display: grid;
@@ -411,8 +413,77 @@ q span {
   letter-spacing: 1.5px;
 }
 #services .services .service-description p {
+  font-size: 0.875rem;
   line-height: 48px;
   letter-spacing: 0.45px;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 111px;
+}
+.team-members .member {
+  display: flex;
+  align-items: end;
+  padding: 50px 55px 0 55px;
+}
+.team-members .member img {
+  width: 100%;
+}
+.team-members .dark-grey-background {
+  background-color: #e4e4e5;
+}
+.team-members .light-grey-background {
+  background-color: #eff0f0;
+}
+
+#pricing {
+  background-color: rgba(237, 239, 241, 0.35);
+  padding: 0px 266px 0 265px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 107px;
+}
+.items .item {
+  background-color: #ffffff;
+}
+.items .item-price {
+  padding: 54px 34px 57px 34px;
+}
+.items .item-price h3 {
+  margin-bottom: 27px;
+  font-size: 3.75rem;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  color: #17daa3;
+}
+.items .item-price p {
+  opacity: 45%;
+}
+.items .item-description {
+  padding: 67px 34px 75px 34px;
+}
+.items .item-description p {
+  line-height: 48px;
+  letter-spacing: 0.45px;
+}
+.items .item-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 34px 30px 34px;
+  background-color: #17daa3;
+}
+.items .item-button p {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
 }
 
 .section-title {
