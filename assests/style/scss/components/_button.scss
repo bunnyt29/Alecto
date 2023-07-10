@@ -11,4 +11,10 @@
   letter-spacing: typography.$letter-spacing-sm;
   display: grid;
   place-items: center;
+
+  &:hover{
+    cursor: pointer;
+    background-color: #276856;
+    transition: 0.5s;
+  }
 }

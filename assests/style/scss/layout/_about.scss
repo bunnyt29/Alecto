@@ -1,7 +1,7 @@
 @use '../abstracts/colors';
 @use '../abstracts/variables';
 @use '../abstracts/typography';
-@use 'button';
+@use '../components/button';
 
 .about-content{
     padding: variables.$wrapper;
@@ -30,11 +30,14 @@
             &:hover{
                 background-color: colors.$green;
                 transition: 0.2ms;
+
+                img{
+                    filter: brightness(2);
+                }
             }
 
             img{
-                width: 53px;
-                height: 53px;
+                width: 30%;
                 z-index: 2;
             }
         }

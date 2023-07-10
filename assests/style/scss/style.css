@@ -109,6 +109,14 @@ q {
   letter-spacing: 0.75px;
 }
 
+@media (min-width: 0) {
+  h1 {
+    font-size: 3.125rem;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+}
 header {
   position: relative;
   height: 100vh;
@@ -116,7 +124,6 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assests/images/photo.png");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 0px 266px 0 265px;
   display: flex;
   flex-direction: column;
 }
@@ -129,6 +136,16 @@ header nav img {
   height: 27px;
   width: 108px;
 }
+header nav .hamburger-menu {
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+}
+header nav .hamburger-menu span {
+  width: 35px;
+  height: 2px;
+  background-color: white;
+}
 header nav ul {
   display: flex;
   gap: 60px;
@@ -140,19 +157,21 @@ header .hero {
   position: absolute;
   top: 60%;
   left: 50%;
-  width: 65%;
+  width: 80vw;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   gap: 63px;
 }
 header .hero h1 {
+  text-align: center;
   margin-bottom: 30px;
 }
 header .hero h1 span {
   font-weight: 700;
 }
 header .hero p {
+  text-align: center;
   font-size: 1.5rem;
   color: white;
 }
@@ -175,7 +194,52 @@ header .hero .button .button-learn-more {
   place-items: center;
   border: 2px solid white;
 }
+header .hero .button .button-learn-more:hover {
+  cursor: pointer;
+  background-color: #276856;
+  transition: 0.5s;
+}
 
+@media (min-width: 0) {
+  header {
+    padding-inline: 30px;
+  }
+  header nav ul {
+    display: none;
+  }
+  header .hero .first {
+    bottom: 150px;
+  }
+  header .hero p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 576px) {
+  header nav ul {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  header nav ul {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  header nav .hamburger-menu {
+    display: none;
+  }
+  header nav ul {
+    display: flex;
+  }
+}
+@media (min-width: 1400px) {
+  header {
+    padding: 0px 266px 0 265px;
+  }
+  header .hero {
+    width: 65%;
+  }
+}
 .about-content {
   padding: 0px 266px 0 265px;
   display: grid;
@@ -204,9 +268,11 @@ header .hero .button .button-learn-more {
   background-color: #17daa3;
   transition: 0.2ms;
 }
+.about-content-element .image-container:hover img {
+  filter: brightness(2);
+}
 .about-content-element .image-container img {
-  width: 53px;
-  height: 53px;
+  width: 30%;
   z-index: 2;
 }
 .about-content-element p {
@@ -227,6 +293,11 @@ header .hero .button .button-learn-more {
   place-items: center;
   margin: auto;
   margin-top: 107px;
+}
+.button-learn-more-green:hover {
+  cursor: pointer;
+  background-color: #276856;
+  transition: 0.5s;
 }
 
 #work-element-1 {
@@ -316,6 +387,7 @@ header .hero .button .button-learn-more {
   margin: auto;
   padding: 0;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .first {
@@ -342,6 +414,10 @@ header .hero .button .button-learn-more {
 }
 .slider-buttons .slider-icon:not(:first-child) {
   margin-left: 13px;
+}
+
+.fill-element {
+  background-color: white;
 }
 
 #quotes {
@@ -427,24 +503,18 @@ q span {
   position: relative;
   display: flex;
   align-items: end;
-  padding: 50px 55px 0 0;
-  text-align: center;
+  justify-content: center;
 }
 .team-members .member img {
-  width: 100%;
-  padding-left: 55px;
-}
-.team-members .member q {
-  display: none;
-  padding: 186px 119px;
+  padding-top: 57px;
 }
 .team-members .member .member-name {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-  width: 380px;
-  height: 398px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   background-color: rgba(23, 218, 163, 0.9);
   text-align: center;
@@ -457,7 +527,7 @@ q span {
 .team-members .member .member-name:hover {
   cursor: pointer;
   opacity: 1;
-  transition: 0.5ms;
+  transition: 0.5s;
 }
 .team-members .dark-grey-background {
   background-color: #e4e4e5;
@@ -520,6 +590,8 @@ q span {
 }
 .items .item-button:hover {
   cursor: pointer;
+  transition: 0.5s;
+  background-color: #276856;
 }
 
 #locations {

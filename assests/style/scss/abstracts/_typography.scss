@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'mixins';
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700&display=swap');
 @font-face {
     font-family: ProximaNova;
@@ -83,4 +84,14 @@ q{
     font-weight: $fw-light;
     color: colors.$white;
     letter-spacing: $letter-spacing-md;
+}
+
+@include mixins.xs{
+    h1{
+        font-size: 3.125rem;
+    }
+
+    p{
+        font-size: $font-size-sm;
+    }
 }

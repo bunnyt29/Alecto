@@ -1,5 +1,6 @@
-@use 'button';
+@use '../components/button';
 @use '../abstracts/colors';
+@use '../abstracts/mixins';
 @use '../abstracts/typography';
 @import '../abstracts/variables';
 
@@ -10,7 +11,6 @@ header{
     background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('/assests/images/photo.png');
     background-size: cover;
     background-repeat: no-repeat;
-    padding: $wrapper;
     display: flex;
     flex-direction: column;
 
@@ -24,12 +24,26 @@ header{
             width: 108px;
         }
 
+        .hamburger-menu{
+            display: flex;
+            gap: 7px;
+            flex-direction: column;
+            
+            span{
+                width: 35px;
+                height: 2px;
+                background-color: white;
+            }
+        }
+
         ul{
             display: flex;
             gap: 60px;
 
-            li a{
-                text-transform: uppercase;
+            li{
+                a{
+                   text-transform: uppercase; 
+                }
             }
         }
     }
@@ -38,13 +52,14 @@ header{
         position: absolute;
         top: 60%;
         left: 50%;
-        width: 65%;
+        width: 80vw;
         transform: translate(-50%, -50%);
         display: flex;
         flex-direction: column;
         gap: 63px;
 
         h1{
+            text-align: center;
             margin-bottom: 30px;
             span{
                 font-weight: typography.$fw-bold;
@@ -52,6 +67,7 @@ header{
         }
 
         p{
+            text-align: center;
             font-size: typography.$font-size-lg;
             color: white;
         }
@@ -70,4 +86,73 @@ header{
         }
     }
 
+}
+
+
+@include mixins.xs{
+    header{
+        padding-inline: 30px;
+
+        nav{           
+            ul{
+                display: none;
+            }
+        }
+
+        .hero{
+
+            .first{
+                bottom: 150px;
+            }
+
+            p{
+                font-size: typography.$font-size-md;
+            }
+        }
+    }
+}
+
+@include mixins.sm{
+    header{
+        nav{
+            ul{
+                display: flex;
+            }
+        }
+    }
+}
+
+@include mixins.md{
+    header{
+        nav{
+            ul{
+                display: flex;
+            }
+        }
+    }
+}
+
+@include mixins.lg{
+    header{
+        nav{
+
+            .hamburger-menu{
+                display: none;
+            }
+
+            ul{
+                display: flex;
+            }
+        }
+    }
+}
+
+@include mixins.xxl{
+        header{
+            padding: $wrapper;
+            .hero{
+                width: 65%;
+
+            }
+        }
 }

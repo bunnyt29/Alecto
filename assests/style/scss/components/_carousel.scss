@@ -47,6 +47,7 @@
     margin: auto;
     padding: 0;
     cursor: pointer;
+    z-index: 1000;
   }
 
 .first{
@@ -75,4 +76,8 @@
             margin-left: 13px;
         }
     }
+}
+
+.fill-element{
+    background-color: white;
 }
