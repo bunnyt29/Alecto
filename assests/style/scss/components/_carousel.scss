@@ -1,4 +1,5 @@
 @use '../abstracts/typography';
+@use '../breakpoints/breakpoints';
 
 .slider-wrapper {
     position: relative;
@@ -33,6 +34,12 @@
     flex: 1 0 100%;
 }
 
+.slide-2{
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+}
+
 .slides-container::-webkit-scrollbar { 
     width: 0;
     height: 0;
@@ -53,6 +60,14 @@
 .first{
     position: absolute;
 }
+
+.second{
+    position: absolute;
+
+    @include breakpoints.media("<=phone"){
+        height: 1.5rem;
+    }
+}
   
   #slide-arrow-prev {
     left: 0;
@@ -61,6 +76,23 @@
 
   #slide-arrow-next {
     right: 0;
+  }
+
+  #slide-arrow-prev-2 {
+    left: 20%;
+
+    @include breakpoints.media("<=phone"){
+        left: 5%;
+    }
+  }
+
+
+  #slide-arrow-next-2 {
+    right: 20%;
+
+    @include breakpoints.media("<=phone"){
+        right: 5%;
+    }
   }
 
   .slider-buttons{
@@ -78,6 +110,6 @@
     }
 }
 
-.fill-element{
+.active{
     background-color: white;
 }

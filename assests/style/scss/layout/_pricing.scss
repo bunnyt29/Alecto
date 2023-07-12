@@ -1,69 +1,79 @@
 @use '../abstracts/colors';
 @use '../abstracts/variables';
 @use '../abstracts/typography';
+@use '../breakpoints/breakpoints';
 
 #pricing{
     background-color: colors.$very-light-grey-background;
     padding: variables.$wrapper;
-}
 
-.items{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 107px;
-    padding-bottom: 111px;
-    .item{
-        background-color: colors.$white;
-        box-shadow: 0 0 35px 0 rgba(227, 227, 227, 0.65);
-
-        hr{
-            color: rgba($color: #000000, $alpha: 0.1);
-        }
-
-        &-price{
-            padding: 54px 34px 57px 34px;
-            
-            h3{
-                margin-bottom: 27px;
-                font-size: typography.$font-size-3xl;
-                font-weight: typography.$fw-extraLight;
-                letter-spacing: typography.$letter-spacing-lg;
-                color: colors.$green;
+    .items{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        gap: 30px;
+        margin-top: 107px;
+        padding-bottom: 111px;
+        .item{
+            background-color: colors.$white;
+            box-shadow: 0 0 35px 0 rgba(227, 227, 227, 0.65);
+    
+            hr{
+                color: rgba($color: #000000, $alpha: 0.1);
             }
-
-            p{
-                opacity: 45%;
+    
+            &-price{
+                padding: 54px 34px 57px 34px;
+                
+                h3{
+                    margin-bottom: 27px;
+                    font-size: typography.$font-size-3xl;
+                    font-weight: typography.$fw-extraLight;
+                    letter-spacing: typography.$letter-spacing-lg;
+                    color: colors.$green;
+                }
+    
+                p{
+                    opacity: 45%;
+                }
+            }
+    
+            &-description{
+                padding: 67px 34px 75px 34px;
+                p{
+                    line-height: typography.$line-height-lg;
+                    letter-spacing: typography.$letter-spacing-sm;
+                }
+            }
+    
+            &-button{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 34px 30px 34px;
+                background-color: colors.$green;
+    
+                p{
+                    color: colors.$white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: typography.$letter-spacing-xl;
+                }
+            }
+    
+            &-button:hover{
+                cursor: pointer;
+                transition: 0.5s;
+                background-color: #276856;
             }
         }
+    }
 
-        &-description{
-            padding: 67px 34px 75px 34px;
-            p{
-                line-height: typography.$line-height-lg;
-                letter-spacing: typography.$letter-spacing-sm;
-            }
-        }
+    @include breakpoints.media("<=phone"){
+        padding: 0;
 
-        &-button{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 34px 30px 34px;
-            background-color: colors.$green;
-
-            p{
-                color: colors.$white;
-                text-transform: uppercase;
-                font-weight: bold;
-                letter-spacing: typography.$letter-spacing-xl;
-            }
-        }
-
-        &-button:hover{
-            cursor: pointer;
-            transition: 0.5s;
-            background-color: #276856;
+        .items{
+            grid-template-columns: 100%;
         }
     }
 }
+

@@ -1,6 +1,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/typography';
 @use '../abstracts/colors';
+@use '../breakpoints/breakpoints';
 
 #services{
     background-color: colors.$very-light-grey-background;
@@ -43,9 +44,26 @@
                 }
 
                 p{
-                    font-size: typography.$font-size-sm;
                     line-height: typography.$line-height-lg;
                     letter-spacing: typography.$letter-spacing-sm;
+                }
+            }
+        }
+
+        @include breakpoints.media("<=phone"){
+            padding: 0;
+            margin-top: 50px;
+            grid-template-columns: 100%;
+        
+            .service{
+                grid-template-columns: 100%;
+                place-items: center;
+                text-align: center;
+
+                &-description{
+                    h3{
+                        font-size: typography.$mb-font-size-3xl;
+                    }
                 }
             }
         }

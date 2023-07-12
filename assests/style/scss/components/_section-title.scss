@@ -1,3 +1,5 @@
+@use '../abstracts/typography';
+@import '../breakpoints/breakpoints';
 @import '../abstracts/colors';
 
 .section-title{
@@ -5,11 +7,18 @@
     flex-direction: column;
     align-items: center;
     padding-top: 110px;
+    text-align: center;
 
     span{
         width: 30px;
         height: 1px;
         margin-block: 27px 38px;
         background-color: $green;
+    }
+
+    @include media("<=phone"){
+      h2{
+        font-size: typography.$mb-font-size-3xl;
+      }
     }
 }

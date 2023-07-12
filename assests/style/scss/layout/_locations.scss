@@ -1,4 +1,5 @@
 @use '../abstracts/typography';
+@use '../breakpoints/breakpoints';
 
 #locations{
 
@@ -32,4 +33,21 @@
         height: 100%;
         object-fit: cover;
     }
+
+
+    @include breakpoints.media("<=phone"){
+        padding:  0 0 0 0;
+
+        .locations{
+            flex-direction: column-reverse;
+            text-align: center;
+
+            .button-learn-more-green{
+                margin: 74px auto;
+                margin-bottom: 0;
+            }
+        }
+        
+    }
+    
 }

@@ -1,6 +1,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/colors';
 @use '../abstracts/typography';
+@use '../breakpoints/breakpoints';
 
 #work-element-1{
     background-color: colors.$very-light-grey-background;
@@ -32,6 +33,27 @@
             margin: 74px 0 0 0;
         }
     }
+
+    @include breakpoints.media("<=phone"){
+        padding: 0;
+        grid-template-columns: 100%;
+        text-align: center;
+        gap: 50px;
+
+        img{
+            width: 100%;
+        }
+
+        &-description{
+            width: 100%;
+
+            .button-learn-more-green{
+                place-items: left;
+                margin: 74px auto;
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 #work-element-2{
@@ -42,9 +64,16 @@
         grid-column: 2;
     }
 
-    .work-element-description-2{
+    &-description-2{
         grid-row: 1;
         grid-column: 1;
         width: 90%;
+    }
+
+    @include breakpoints.media("<=phone"){
+        padding: 0;
+        grid-template-columns: 100%;
+        text-align: center;
+        gap: 50px;
     }
 }

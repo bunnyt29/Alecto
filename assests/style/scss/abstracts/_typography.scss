@@ -18,6 +18,9 @@ $font-size-xl: 1.875rem;
 $font-size-2xl: 2.25rem;
 $font-size-3xl: 3.75rem;
 
+/* Font sizes for mobile */
+$mb-font-size-3xl: 3.125rem;
+
 /* Line heights. */
 $line-height-sm: 30px;
 $line-height-md: 36px;
@@ -86,12 +89,12 @@ q{
     letter-spacing: $letter-spacing-md;
 }
 
-@include mixins.xs{
-    h1{
-        font-size: 3.125rem;
-    }
+// @include mixins.xs{
+//     h1{
+//         font-size: 3.125rem;
+//     }
 
-    p{
-        font-size: $font-size-sm;
-    }
-}
+//     p{
+//         font-size: $font-size-sm;
+//     }
+// }

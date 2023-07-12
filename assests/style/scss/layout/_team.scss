@@ -3,7 +3,7 @@
 
 .team-members{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 20% 20% 20% 20% 20%;
     margin-top: 111px;
 
     .member{
@@ -14,6 +14,7 @@
 
         img{
             padding-top: 57px;
+            width: 80%;
         }
 
         .member-name{

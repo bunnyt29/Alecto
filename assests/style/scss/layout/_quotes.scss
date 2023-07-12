@@ -2,6 +2,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/typography';
 @use '../abstracts/colors';
+@use '../breakpoints/breakpoints';
 
 #quotes{
     
@@ -10,12 +11,13 @@
     padding-block: 188px 147px;
     background-image: url(/assests/images/photo_2.png);
     background-repeat: no-repeat;
+    text-align: center;
 
     .quotes-carousel{
         display: flex;
         justify-content: space-between;
 
-        .slider-wrapper .slides-container .slide {
+        .slider-wrapper .slides-container .slide-2 {
 
             img{
                 margin-bottom: 45px;
@@ -36,6 +38,11 @@
     .slider-buttons{
         margin-top: 123px;
     }
+
+    @include breakpoints.media("<=phone"){
+        padding-inline: 0;
+        background-size: cover;
+    }
 }
 
 q{
@@ -43,5 +50,11 @@ q{
 
     span{
         color: colors.$green;
+    }
+
+    @include breakpoints.media("<=phone"){
+        text-align: center;
+        font-size: typography.$font-size-lg;
+        width: 80%;
     }
 }

@@ -2,7 +2,9 @@
 @use '../abstracts/colors';
 @use '../abstracts/mixins';
 @use '../abstracts/typography';
+@use '../breakpoints/breakpoints';
 @import '../abstracts/variables';
+
 
 header{
     position: relative;
@@ -13,6 +15,7 @@ header{
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    padding: $wrapper;
 
     nav{
         display: flex;
@@ -86,73 +89,113 @@ header{
         }
     }
 
-}
+    .icon-down{
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        cursor: pointer;
+    }
 
-
-@include mixins.xs{
-    header{
+    @include breakpoints.media("<=phone"){
         padding-inline: 30px;
 
-        nav{           
+       nav{
             ul{
                 display: none;
             }
-        }
+       }
 
-        .hero{
+       .hero{
+
+            h1{
+                font-size: typography.$mb-font-size-3xl;
+            }
 
             .first{
                 bottom: 150px;
+                
+                height: 2em;
             }
-
-            p{
-                font-size: typography.$font-size-md;
-            }
-        }
+       }
     }
 }
 
-@include mixins.sm{
-    header{
-        nav{
-            ul{
-                display: flex;
-            }
-        }
-    }
-}
+// @include mixins.xs{
+//     header{
+//         padding-inline: 30px;
 
-@include mixins.md{
-    header{
-        nav{
-            ul{
-                display: flex;
-            }
-        }
-    }
-}
+//         nav{           
+//             ul{
+//                 display: none;
+//             }
+//         }
 
-@include mixins.lg{
-    header{
-        nav{
+//         .hero{
 
-            .hamburger-menu{
-                display: none;
-            }
+//             .first{
+//                 bottom: 150px;
+//             }
 
-            ul{
-                display: flex;
-            }
-        }
-    }
-}
+//             p{
+//                 font-size: typography.$font-size-md;
+//             }
+//         }
+//     }
+// }
 
-@include mixins.xxl{
-        header{
-            padding: $wrapper;
-            .hero{
-                width: 65%;
+// @include mixins.sm{
+//     header{
+//         nav{
+//             ul{
+//                 display: flex;
+//             }
+//         }
+//     }
+// }
 
-            }
-        }
-}
+// @include mixins.md{
+//     header{
+//         nav{
+//             ul{
+//                 display: flex;
+//             }
+//         }
+//     }
+// }
+
+// @include mixins.lg{
+//     header{
+//         padding: $wrapper;
+//         nav{
+
+//             .hamburger-menu{
+//                 display: none;
+//             }
+
+//             ul{
+//                 display: flex;
+//             }
+//         }
+//     }
+// }
+
+// @include mixins.xxl{
+//         header{
+//             padding: $wrapper;
+
+//             .hero{
+//                 width: 70%;
+//                 h1{
+//                     font-size: typography.$font-size-3xl;
+//                 }
+
+//                 p{
+//                     font-size: typography.$font-size-lg;
+//                 }
+//             }
+//         }
+
+//         p{
+//             font-size: typography.$font-size-md;
+//         }
+// }

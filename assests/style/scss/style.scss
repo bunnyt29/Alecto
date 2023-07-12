@@ -2,3 +2,8 @@
 @use 'abstracts';
 @use 'layout';
 @use 'components';
+@use 'breakpoints';
+
+html{
+    scroll-behavior: smooth;
+}
