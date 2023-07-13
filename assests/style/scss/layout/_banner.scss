@@ -27,4 +27,24 @@
             font-size: typography.$mb-font-size-3xl;
         }
     }
+
+    @include breakpoints.media(">phone", "<=tablet"){
+        padding-inline: 30px;
+        background-size: cover;
+        text-align: center;
+
+        h2{
+            font-size: typography.$mb-font-size-3xl;
+        }
+    }
+    
+    @include breakpoints.media(">tablet", "<=desktop"){
+        padding-inline: 30px;
+        background-size: cover;
+        text-align: center;
+
+        h2{
+            font-size: typography.$mb-font-size-3xl;
+        }
+    }
 }

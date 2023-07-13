@@ -1,5 +1,5 @@
 @use '../abstracts/typography';
-@import '../breakpoints/breakpoints';
+@use '../breakpoints/breakpoints';
 @import '../abstracts/colors';
 
 .section-title{
@@ -16,9 +16,28 @@
         background-color: $green;
     }
 
-    @include media("<=phone"){
+    @include breakpoints.media("<=phone"){
+      padding-inline: 20px;
+
       h2{
         font-size: typography.$mb-font-size-3xl;
+      }
+
+      p{
+        text-wrap: balance;
+        line-height: typography.$line-height-sm;
+      }
+    }
+
+    @include breakpoints.media(">phone", "<=tablet"){
+      padding-inline: 20px;
+      h2{
+        font-size: typography.$mb-font-size-3xl;
+      }
+
+      p{
+        text-wrap: balance;
+        line-height: typography.$line-height-sm;
       }
     }
 }

@@ -7,6 +7,10 @@
     background-color: colors.$very-light-grey-background;
     padding: variables.$wrapper;
 
+    #mobile-view-of-items{
+        display: none;
+    }
+
     .items{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
@@ -71,8 +75,47 @@
     @include breakpoints.media("<=phone"){
         padding: 0;
 
+        #desktop-view-of-items{
+            display: none;
+        }
+
+        #mobile-view-of-items{
+            display: grid;
+        }
+
         .items{
+            padding-inline: 20px;
             grid-template-columns: 100%;
+
+            .item{
+                width: 70vw;
+                margin: 0 auto;
+                border-radius: 10px;
+
+                &-button{
+                    border-radius: 0 0 10px 10px;
+                }
+            }
+        }
+    }
+
+    @include breakpoints.media(">phone", "<=tablet"){
+        padding: 0;
+
+        .items{
+            grid-template-columns: 50% 50%;
+            padding-inline: 30px;
+            gap: 15px;
+        }
+    }
+
+    @include breakpoints.media(">tablet", "<=desktop"){
+        padding: 0;
+
+        .items{
+            grid-template-columns: 50% 50%;
+            padding-inline: 60px;
+            gap: 25px;
         }
     }
 }

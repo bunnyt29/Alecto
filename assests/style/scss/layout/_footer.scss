@@ -35,14 +35,47 @@ footer{
     }
 
     @include breakpoints.media("<=phone"){
+        display: flex;
+        justify-content: center;
         background-size: contain;
-        background-color: black;
+        padding-bottom: 50px;
+        height: 500px;
 
         .footer{
             padding-inline: 0;
-
             flex-direction: column-reverse;
+            justify-content: space-between;
+
+            &-navbar ul{
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 
+    @include breakpoints.media(">phone", "<=tablet"){
+
+        display: flex;
+        justify-content: center;
+        background-size: contain;
+        padding-bottom: 50px;
+        height: 500px;
+
+        .footer{
+            padding-inline: 0;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+
+            &-navbar ul{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    @include breakpoints.media(">tablet", "<=desktop"){
+        .footer{
+            padding-inline: 30px;
+        }
+    }
 }

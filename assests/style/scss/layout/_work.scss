@@ -3,77 +3,149 @@
 @use '../abstracts/typography';
 @use '../breakpoints/breakpoints';
 
-#work-element-1{
-    background-color: colors.$very-light-grey-background;
-    margin-top: 108px;
-}
-
-.work-element{
-    padding: variables.$wrapper;
-    padding-block: 144px 103px;
-    display: grid;
-    grid-template-columns: 33% 67%;
-    gap: 247px;
-    
-    &-description{
-        width: 80%;
-        padding-block: 20px 62px;
-
-        h2{
-            margin-bottom: 72px;
-        }
-
-        p{
-            line-height: typography.$line-height-md;
-            letter-spacing: typography.$letter-spacing-sm;   
-        }
-
-        .button-learn-more-green{
-            place-items: left;
-            margin: 74px 0 0 0;
-        }
+#work{
+    #work-element-1{
+        background-color: colors.$very-light-grey-background;
+        margin-top: 108px;
     }
-
-    @include breakpoints.media("<=phone"){
-        padding: 0;
-        grid-template-columns: 100%;
-        text-align: center;
-        gap: 50px;
-
-        img{
-            width: 100%;
-        }
-
+    
+    .work-element{
+        padding: variables.$wrapper;
+        padding-block: 144px 103px;
+        display: grid;
+        grid-template-columns: 33% 67%;
+        gap: 247px;
+        
         &-description{
-            width: 100%;
-
+            width: 80%;
+            padding-block: 20px 62px;
+    
+            h2{
+                margin-bottom: 72px;
+            }
+    
+            p{
+                line-height: typography.$line-height-md;
+                letter-spacing: typography.$letter-spacing-sm;   
+            }
+    
             .button-learn-more-green{
                 place-items: left;
-                margin: 74px auto;
-                margin-bottom: 0;
+                margin: 74px 0 0 0;
+            }
+        }
+    
+        @include breakpoints.media("<=phone"){
+            padding: 0;
+            grid-template-columns: 100%;
+            text-align: center;
+            gap: 50px;
+    
+            img{
+                width: 100%;
+            }
+    
+            &-description{
+                width: 100%;
+    
+                .button-learn-more-green{
+                    margin: 74px auto;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        
+        @include breakpoints.media(">phone", "<=tablet"){
+            padding: 0;
+            grid-template-columns: 100%;
+            gap: 0;
+            place-items: center;
+
+            img{
+                width: 60%;
+            }
+
+            &-description{
+                text-align: center;
+
+                .button-learn-more-green{
+                    margin: 74px auto;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @include breakpoints.media(">tablet", "<=desktop"){
+            padding: 0;
+            padding-inline: 30px;
+            grid-template-columns: 1fr 1fr;
+            place-items: center;
+            gap: 20px;
+
+            img{
+                width: 100%;
+            }
+
+            &-description{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+
+                text-align: right;
+
+                .button-learn-more-green{
+                    place-items: right;
+                }
+            }
+        }
+
+    }
+    
+    #work-element-2{
+        gap: 0;
+        grid-template-columns: 60% 40%;
+        .work-element-image-2{
+            grid-row: 1;
+            grid-column: 2;
+        }
+    
+        &-description-2{
+            grid-row: 1;
+            grid-column: 1;
+            width: 90%;
+        }
+    
+        @include breakpoints.media("<=phone"){
+            grid-template-columns: 100%;
+
+            .work-element-image-2{
+                grid-column: 1;
+            }
+        }
+
+        @include breakpoints.media(">phone", "<=tablet"){
+            grid-template-columns: 100%;
+
+            .work-element-image-2{
+                grid-column: 1;
+            }
+        }
+
+        @include breakpoints.media(">tablet", "<=desktop"){
+            grid-template-columns: 1fr 1fr;
+
+            .work-element-description-2{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                text-align: start;
             }
         }
     }
-}
-
-#work-element-2{
-    gap: 0;
-    grid-template-columns: 60% 40%;
-    .work-element-image-2{
-        grid-row: 1;
-        grid-column: 2;
-    }
-
-    &-description-2{
-        grid-row: 1;
-        grid-column: 1;
-        width: 90%;
-    }
 
     @include breakpoints.media("<=phone"){
-        padding: 0;
-        grid-template-columns: 100%;
-        text-align: center;
-        gap: 50px;
+        padding-inline: 20px;
     }
 }

@@ -81,7 +81,7 @@
   #slide-arrow-prev-2 {
     left: 20%;
 
-    @include breakpoints.media("<=phone"){
+    @include breakpoints.media("<=tablet"){
         left: 5%;
     }
   }
@@ -90,7 +90,7 @@
   #slide-arrow-next-2 {
     right: 20%;
 
-    @include breakpoints.media("<=phone"){
+    @include breakpoints.media("<=tablet"){
         right: 5%;
     }
   }

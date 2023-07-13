@@ -41,6 +41,7 @@ header{
 
         ul{
             display: flex;
+            align-items: center;
             gap: 60px;
 
             li{
@@ -109,6 +110,70 @@ header{
 
             h1{
                 font-size: typography.$mb-font-size-3xl;
+            }
+
+            p{
+                text-wrap:balance;
+            }
+
+            .first{
+                bottom: 150px;
+                
+                height: 2em;
+            }
+       }
+    }
+
+    @include breakpoints.media(">phone", "<=tablet"){
+        padding-inline: 30px;
+
+       nav{
+            ul{
+                display: none;
+            }
+       }
+
+       .hero{
+
+            h1{
+                font-size: typography.$mb-font-size-3xl;
+            }
+
+            p{
+                font-size: typography.$font-size-md;
+                text-wrap:balance;
+            }
+
+            .first{
+                bottom: 150px;
+                
+                height: 2em;
+            }
+       }
+    }
+
+    @include breakpoints.media(">tablet", "<=desktop"){
+        padding-inline: 30px;
+
+       nav{
+            .hamburger-menu{
+                display: none;
+            }
+
+            ul{
+                gap: 30px;
+            }
+       }
+
+       .hero{
+
+            h1{
+                font-size: typography.$mb-font-size-3xl;
+            }
+
+            p{
+                font-size: typography.$font-size-md;
+                text-wrap:balance;
             }
 
             .first{

@@ -4,55 +4,102 @@
 @use '../components/button';
 @use '../breakpoints/breakpoints';
 
-.about-content{
-    padding: variables.$wrapper;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-
-    &-element{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+#about-us{
+    .about-content{
+        padding: variables.$wrapper;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
         margin-top: 156px;
-        text-align: center;
 
-        .image-container{
+        &-element{
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 86px;
-            width: 182px;
-            height: 182px;
-            border-radius: 50%;
-            background-color: colors.$light-grey-background;
-
-            &:hover{
-                background-color: colors.$green;
-                transition: 0.5s;
-
-                img{
-                    filter: brightness(2);
+            justify-content: center;
+            text-align: center;
+    
+            .image-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 86px;
+                width: 182px;
+                height: 182px;
+                border-radius: 50%;
+                background-color: colors.$light-grey-background;
+    
+                &:hover{
+                    background-color: colors.$green;
                     transition: 0.5s;
+    
+                    img{
+                        filter: brightness(2);
+                        transition: 0.5s;
+                    }
+                }
+    
+                img{
+                    width: 30%;
+                    z-index: 2;
                 }
             }
-
-            img{
-                width: 30%;
-                z-index: 2;
+    
+            p{
+                margin-top: 48px;
+                text-align: center;
+                line-height: typography.$line-height-sm;
             }
-        }
-
-        p{
-            margin-top: 48px;
-            text-align: center;
-            line-height: typography.$line-height-sm;
         }
     }
 
     @include breakpoints.media("<=phone"){
-        padding: 0;
-        grid-template-columns: 100%;
+        .about-content{
+            padding-inline: 20px;
+            padding: 0;
+            grid-template-columns: 100%;
+
+            &-element{
+                p{
+                    text-wrap: balance;
+                }
+            }
+        }
+    }
+
+    @include breakpoints.media(">phone", "<=tablet"){
+        .about-content{
+            padding-inline: 30px;
+            padding: 0;
+            grid-template-columns: 50% 50%;
+
+            &-element{
+                p{
+                    text-wrap: balance;
+                    padding-inline: 20px;
+                }
+            }
+        }
+    }
+
+    @include breakpoints.media(">tablet", "<=desktop"){
+        .about-content{
+            margin-top: 100px;
+            padding: 0;
+
+            &-element{
+
+                h3, p{
+                    padding-inline: 20px;
+                }
+
+                .image-container{
+                    width: 150px;
+                    height: 150px;
+                    margin-bottom: 50px
+                }
+            }
+
+        }
     }
 }
 

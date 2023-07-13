@@ -41,6 +41,10 @@
         .locations{
             flex-direction: column-reverse;
             text-align: center;
+            
+            &-description{
+                padding-inline: 20px;
+            }
 
             .button-learn-more-green{
                 margin: 74px auto;
@@ -48,6 +52,43 @@
             }
         }
         
+    }
+
+    @include breakpoints.media(">phone", "<=tablet"){
+        padding: 0;
+
+        .locations{
+            flex-direction: column-reverse;
+            text-align: center;
+
+            &-description{
+                padding-inline: 30px;
+            }
+
+            .button-learn-more-green{
+                margin: 74px auto;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+    
+    @include breakpoints.media(">tablet", "<=desktop"){
+        padding: 0;
+
+        .locations{
+            align-items: center;
+
+            &-description{
+                width: 50%;
+                padding-inline: 30px;
+            }
+
+            img{
+                width: 50%;
+            }
+        }
     }
     
 }

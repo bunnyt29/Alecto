@@ -49,9 +49,12 @@
                 }
             }
         }
+    }
 
-        @include breakpoints.media("<=phone"){
+    @include breakpoints.media("<=phone"){
+        .services{
             padding: 0;
+            padding-inline: 20px;
             margin-top: 50px;
             grid-template-columns: 100%;
         
@@ -59,10 +62,68 @@
                 grid-template-columns: 100%;
                 place-items: center;
                 text-align: center;
-
+    
                 &-description{
                     h3{
                         font-size: typography.$mb-font-size-3xl;
+                    }
+                    
+                    p{
+                        text-wrap: balance;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoints.media(">phone", "<=tablet"){
+        .services{
+            margin-top: 50px;
+            padding: 0;
+            padding-inline: 30px;
+            grid-template-columns: 50% 50%;
+            gap: 10px;
+
+            .service{
+                grid-template-columns: 100%;
+                gap: 10px;
+                place-items: center;
+                text-align: center;
+
+                &-description{
+                    h3{
+                        font-size: typography.$font-size-2xl;
+                    }
+                    
+                    p{
+                        text-wrap: balance;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoints.media(">tablet", "<=desktop"){
+        .services{
+            margin-top: 50px;
+            padding: 0;
+            padding-inline: 30px;
+            grid-template-columns: 50% 50%;
+            gap: 20px;
+
+            .service{
+                grid-template-columns: 100%;
+                gap: 10px;
+                place-items: center;
+                text-align: center;
+
+                &-description{
+                    h3{
+                        font-size: typography.$font-size-2xl;
+                    }
+                    
+                    p{
+                        text-wrap: balance;
                     }
                 }
             }

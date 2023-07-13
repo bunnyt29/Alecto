@@ -43,6 +43,16 @@
         padding-inline: 0;
         background-size: cover;
     }
+
+    @include breakpoints.media(">phone", "<=tablet"){
+        padding-inline: 0;
+        background-size: cover;
+    }
+
+    @include breakpoints.media(">tablet", "<=desktop"){
+        padding-inline: 0;
+        background-size: cover;
+    }
 }
 
 q{
@@ -56,5 +66,13 @@ q{
         text-align: center;
         font-size: typography.$font-size-lg;
         width: 80%;
+    }
+
+    @include breakpoints.media(">phone", "<=tablet"){
+        width: 75%;
+    }
+
+    @include breakpoints.media(">tablet", "<=desktop"){
+        width: 50%;
     }
 }

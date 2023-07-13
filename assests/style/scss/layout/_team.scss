@@ -1,51 +1,53 @@
 @use '../abstracts/colors';
 @use '../abstracts/typography';
 
-.team-members{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    margin-top: 111px;
-
-    .member{
-        position: relative;
-        display: flex;
-        align-items: end;
-        justify-content: center;
-
-        img{
-            padding-top: 57px;
-            width: 80%;
-        }
-
-        .member-name{
+#team{
+    .team-members{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        margin-top: 111px;
+    
+        .member{
+            position: relative;
             display: flex;
+            align-items: end;
             justify-content: center;
-            align-items: center;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background-color: rgba($color: colors.$green, $alpha: 0.9);
-            text-align: center;            
-            font-family: typography.$font-family-primary;
-            font-size: typography.$font-size-2xl;
-            color: colors.$white;
-            font-weight: typography.$fw-extraLight;
-            opacity: 0;
+    
+            img{
+                padding-top: 57px;
+                width: 80%;
+            }
+    
+            .member-name{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-color: rgba($color: colors.$green, $alpha: 0.9);
+                text-align: center;            
+                font-family: typography.$font-family-primary;
+                font-size: typography.$font-size-2xl;
+                color: colors.$white;
+                font-weight: typography.$fw-extraLight;
+                opacity: 0;
+            }
         }
-    }
-
-    .member .member-name:hover{
-        cursor: pointer;
-        opacity: 1;
-        transition: 0.5s;
-    }
-
-    .dark-grey-background{
-        background-color: #e4e4e5;
-    }
-
-    .light-grey-background{
-        background-color: #eff0f0;
+    
+        .member .member-name:hover{
+            cursor: pointer;
+            opacity: 1;
+            transition: 0.5s;
+        }
+    
+        .dark-grey-background{
+            background-color: #e4e4e5;
+        }
+    
+        .light-grey-background{
+            background-color: #eff0f0;
+        }
     }
 }
