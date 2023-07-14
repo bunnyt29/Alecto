@@ -71,6 +71,7 @@
             padding-inline: 30px;
             padding: 0;
             grid-template-columns: 50% 50%;
+            gap: 30px 0;
 
             &-element{
                 p{
@@ -95,6 +96,27 @@
                 .image-container{
                     width: 150px;
                     height: 150px;
+                    margin-bottom: 50px
+                }
+            }
+
+        }
+    }
+
+    @include breakpoints.media(">desktop", "<=LGdesktop"){
+        .about-content{
+            margin-top: 100px;
+            padding-inline: 100px;
+
+            &-element{
+
+                h3, p{
+                    padding-inline: 20px;
+                }
+
+                .image-container{
+                    width: 180px;
+                    height: 180px;
                     margin-bottom: 50px
                 }
             }

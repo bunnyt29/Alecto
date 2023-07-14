@@ -82,11 +82,11 @@
             padding: 0;
             padding-inline: 30px;
             grid-template-columns: 50% 50%;
-            gap: 10px;
+            gap: 20px 0;
 
             .service{
                 grid-template-columns: 100%;
-                gap: 10px;
+                gap: 20px;
                 place-items: center;
                 text-align: center;
 
@@ -126,6 +126,18 @@
                         text-wrap: balance;
                     }
                 }
+            }
+        }
+    }
+
+    @include breakpoints.media(">desktop", "<=LGdesktop"){
+        .services{
+            padding: 0;
+            padding-inline: 100px;
+            grid-template-columns: 50% 50%;
+            gap: 50px 10px;
+            .service{
+                gap: 10px;
             }
         }
     }

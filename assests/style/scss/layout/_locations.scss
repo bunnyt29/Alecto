@@ -90,5 +90,22 @@
             }
         }
     }
+
+    @include breakpoints.media(">desktop", "<=LGdesktop"){
+        padding: 0;
+
+        .locations{
+            align-items: center;
+
+            &-description{
+                width: 50%;
+                padding-left: 100px;
+            }
+
+            img{
+                width: 50%;
+            }
+        }
+    }
     
 }

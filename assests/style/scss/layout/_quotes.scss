@@ -42,6 +42,10 @@
     @include breakpoints.media("<=phone"){
         padding-inline: 0;
         background-size: cover;
+
+        .quotes-carousel .slider-wrapper .slides-container .slide-2 p{
+            padding-inline: 50px;
+        }
     }
 
     @include breakpoints.media(">phone", "<=tablet"){
@@ -51,6 +55,15 @@
 
     @include breakpoints.media(">tablet", "<=desktop"){
         padding-inline: 0;
+        background-size: cover;
+    }
+
+    @include breakpoints.media(">desktop", "<=LGdesktop"){
+        padding-inline: 100px;
+        background-size: cover;
+    }
+
+    @include breakpoints.media(">LGdesktop"){
         background-size: cover;
     }
 }
@@ -74,5 +87,9 @@ q{
 
     @include breakpoints.media(">tablet", "<=desktop"){
         width: 50%;
+    }
+
+    @include breakpoints.media(">desktop", "<=LGdesktop"){
+        width: 60%;
     }
 }

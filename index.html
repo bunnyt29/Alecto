@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assests/style/scss/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Alecto</title>
 </head>
 <body>
     <header>
         <nav>
             <img src="/assests/images/alecto.png" alt="logo-alecto">
-            <div class="hamburger-menu">
+            <a id="btn-hamburger" class="hamburger-menu hide-for-desktop">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul>
+            </a>
+            <ul id="nav-links" class="hidden">
                 <li><a href="#">home</a></li>
                 <li><a href="#">about</a></li>
                 <li><a href="#">work</a></li>
@@ -441,5 +442,6 @@
         </div>
     </footer>
     <script src="/assests/js/carousel.js"></script>
+    <script src="/assests/js/hamburger-menu.js"></script>
 </body>
 </html>

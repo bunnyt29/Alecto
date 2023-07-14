@@ -47,4 +47,8 @@
             font-size: typography.$mb-font-size-3xl;
         }
     }
+
+    @include breakpoints.media(">LGdesktop"){
+        background-size: cover;
+    }
 }

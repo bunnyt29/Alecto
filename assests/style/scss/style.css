@@ -118,7 +118,6 @@ q {
 header {
   position: relative;
   height: 100vh;
-  background-image: url(/assests/images/photo.png);
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assests/images/photo.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -139,11 +138,24 @@ header nav .hamburger-menu {
   display: flex;
   gap: 7px;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
 }
 header nav .hamburger-menu span {
-  width: 35px;
+  width: 36px;
   height: 2px;
   background-color: white;
+  transition: all 300ms ease-in-out;
+  transform-origin: 5px 1px;
+}
+header nav .hamburger-menu.open > span:first-child {
+  transform: rotate(45deg);
+}
+header nav .hamburger-menu.open > span:nth-child(2) {
+  opacity: 0;
+}
+header nav .hamburger-menu.open > span:last-child {
+  transform: rotate(-45deg);
 }
 header nav ul {
   display: flex;
@@ -152,6 +164,12 @@ header nav ul {
 }
 header nav ul li a {
   text-transform: uppercase;
+}
+header nav .mobile-hamburger-links {
+  display: none;
+  background-color: white;
+  width: 100px;
+  height: 100px;
 }
 header .hero {
   position: absolute;
@@ -209,8 +227,38 @@ header .icon-down {
   header {
     padding-inline: 30px;
   }
+  header nav {
+    position: relative;
+  }
+  header nav .hidden {
+    opacity: 0;
+  }
   header nav ul {
-    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding-block: 20px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+    z-index: 100;
+  }
+  header nav ul li {
+    text-align: right;
+  }
+  header nav ul li a {
+    color: black;
+  }
+  header nav ul li svg {
+    fill: black;
+  }
+  header nav ul li:not(:last-child) {
+    margin-bottom: 10px;
   }
   header .hero h1 {
     font-size: 3.125rem;
@@ -227,8 +275,38 @@ header .icon-down {
   header {
     padding-inline: 30px;
   }
+  header .hidden {
+    opacity: 0;
+  }
+  header nav {
+    position: relative;
+  }
   header nav ul {
-    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding-block: 20px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+    z-index: 100;
+  }
+  header nav ul li {
+    text-align: right;
+  }
+  header nav ul li a {
+    color: black;
+  }
+  header nav ul li svg {
+    fill: black;
+  }
+  header nav ul li:not(:last-child) {
+    margin-bottom: 10px;
   }
   header .hero h1 {
     font-size: 3.125rem;
@@ -244,7 +322,7 @@ header .icon-down {
 }
 @media (min-width: 769px) and (max-width: 1366px) {
   header {
-    padding-inline: 30px;
+    padding-inline: 50px;
   }
   header nav .hamburger-menu {
     display: none;
@@ -262,6 +340,25 @@ header .icon-down {
   header .hero .first {
     bottom: 150px;
     height: 2em;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1900px) {
+  header {
+    padding-inline: 100px;
+  }
+  header nav .hamburger-menu {
+    display: none;
+  }
+  header .hero p {
+    text-wrap: balance;
+  }
+  header .hero .first {
+    bottom: 150px;
+  }
+}
+@media (min-width: 1901px) {
+  header nav .hamburger-menu {
+    display: none;
   }
 }
 
@@ -320,6 +417,7 @@ header .icon-down {
     padding-inline: 30px;
     padding: 0;
     grid-template-columns: 50% 50%;
+    gap: 30px 0;
   }
   #about-us .about-content-element p {
     text-wrap: balance;
@@ -337,6 +435,20 @@ header .icon-down {
   #about-us .about-content-element .image-container {
     width: 150px;
     height: 150px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1900px) {
+  #about-us .about-content {
+    margin-top: 100px;
+    padding-inline: 100px;
+  }
+  #about-us .about-content-element h3, #about-us .about-content-element p {
+    padding-inline: 20px;
+  }
+  #about-us .about-content-element .image-container {
+    width: 180px;
+    height: 180px;
     margin-bottom: 50px;
   }
 }
@@ -389,6 +501,7 @@ header .icon-down {
 @media (max-width: 576px) {
   #work .work-element {
     padding: 0;
+    padding-inline: 20px;
     grid-template-columns: 100%;
     text-align: center;
     gap: 50px;
@@ -410,6 +523,7 @@ header .icon-down {
     grid-template-columns: 100%;
     gap: 0;
     place-items: center;
+    padding-block: 70px;
   }
   #work .work-element img {
     width: 60%;
@@ -424,7 +538,7 @@ header .icon-down {
 }
 @media (min-width: 769px) and (max-width: 1366px) {
   #work .work-element {
-    padding: 0;
+    padding-block: 80px;
     padding-inline: 30px;
     grid-template-columns: 1fr 1fr;
     place-items: center;
@@ -432,6 +546,27 @@ header .icon-down {
   }
   #work .work-element img {
     width: 100%;
+  }
+  #work .work-element-description {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: right;
+  }
+  #work .work-element-description .button-learn-more-green {
+    place-items: right;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1900px) {
+  #work .work-element {
+    padding-block: 80px;
+    padding-inline: 100px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  #work .work-element img {
+    width: 80%;
   }
   #work .work-element-description {
     width: 100%;
@@ -484,9 +619,15 @@ header .icon-down {
     text-align: start;
   }
 }
-@media (max-width: 576px) {
-  #work {
-    padding-inline: 20px;
+@media (min-width: 1367px) and (max-width: 1900px) {
+  #work #work-element-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  #work #work-element-2 .work-element-description-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
   }
 }
 
@@ -631,6 +772,9 @@ header .icon-down {
     padding-inline: 0;
     background-size: cover;
   }
+  #quotes .quotes-carousel .slider-wrapper .slides-container .slide-2 p {
+    padding-inline: 50px;
+  }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   #quotes {
@@ -641,6 +785,17 @@ header .icon-down {
 @media (min-width: 769px) and (max-width: 1366px) {
   #quotes {
     padding-inline: 0;
+    background-size: cover;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1900px) {
+  #quotes {
+    padding-inline: 100px;
+    background-size: cover;
+  }
+}
+@media (min-width: 1901px) {
+  #quotes {
     background-size: cover;
   }
 }
@@ -666,6 +821,11 @@ q span {
 @media (min-width: 769px) and (max-width: 1366px) {
   q {
     width: 50%;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1900px) {
+  q {
+    width: 60%;
   }
 }
 
@@ -734,11 +894,11 @@ q span {
     padding: 0;
     padding-inline: 30px;
     grid-template-columns: 50% 50%;
-    gap: 10px;
+    gap: 20px 0;
   }
   #services .services .service {
     grid-template-columns: 100%;
-    gap: 10px;
+    gap: 20px;
     place-items: center;
     text-align: center;
   }
@@ -768,6 +928,17 @@ q span {
   }
   #services .services .service-description p {
     text-wrap: balance;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1900px) {
+  #services .services {
+    padding: 0;
+    padding-inline: 100px;
+    grid-template-columns: 50% 50%;
+    gap: 50px 10px;
+  }
+  #services .services .service {
+    gap: 10px;
   }
 }
 
@@ -823,7 +994,7 @@ q span {
 }
 #pricing .items {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-top: 107px;
   padding-bottom: 111px;
@@ -911,9 +1082,24 @@ q span {
     padding: 0;
   }
   #pricing .items {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
     padding-inline: 60px;
     gap: 25px;
+  }
+}
+@media (min-width: 1367px) and (max-width: 1900px) {
+  #pricing {
+    padding: 100px;
+  }
+  #pricing .items {
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 50px;
+  }
+  #pricing .items .item {
+    width: 80%;
   }
 }
 
@@ -991,6 +1177,21 @@ q span {
     width: 50%;
   }
 }
+@media (min-width: 1367px) and (max-width: 1900px) {
+  #locations {
+    padding: 0;
+  }
+  #locations .locations {
+    align-items: center;
+  }
+  #locations .locations-description {
+    width: 50%;
+    padding-left: 100px;
+  }
+  #locations .locations img {
+    width: 50%;
+  }
+}
 
 #banner {
   display: flex;
@@ -1034,6 +1235,11 @@ q span {
   }
   #banner h2 {
     font-size: 3.125rem;
+  }
+}
+@media (min-width: 1901px) {
+  #banner {
+    background-size: cover;
   }
 }
 
